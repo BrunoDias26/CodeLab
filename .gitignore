@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Installer output: the Setup.exe made by Inno Setup (it goes to GitHub Releases, not to the code)
+/Installer/Output/
+
 # User-specific files
 *.rsuser
 *.suo
