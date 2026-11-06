@@ -3,7 +3,7 @@
 ; Non-commercial use only.
 
 #define MyAppName "CodeLab"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "CodeLab"
 #define EscapeConstArgument(Value) StringChange(StringChange(StringChange(Value, "%", "%25"), ",", "%2c"), "}", "%7d")
 
@@ -36,7 +36,8 @@ UninstallDisplayIcon={uninstallexe}
 ; the screen scaling (64 px at 100%, 128 px on high-DPI screens)
 WizardSmallImageFile=C:\DEV\CodeLab\Icons\CodeLab-64x64.png,C:\DEV\CodeLab\Icons\CodeLab-128x128.png
 OutputDir=C:\DEV\CodeLab\Installer\Output
-OutputBaseFilename=CodeLab-1.0.0-Setup
+; File name built from the defines at the top: change the version only in MyAppVersion
+OutputBaseFilename={#MyAppName}-{#MyAppVersion}-Setup
 SolidCompression=yes
 WizardStyle=modern dynamic
 
