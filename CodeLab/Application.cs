@@ -53,72 +53,74 @@ namespace CodeLab
             // Pipe from Grid directly on the panel (large icon, no pulldown)
             Ribbon_Utilities.AddPushButtonToPanel(panelDimension, "Pipe from Grid", "CodeLab.Commands.General.PipeFromGrid_Button", availability: AvailabilityNames.Project);
 
-            // Create course panel: everything below came from the course lessons and will be removed later
-            var panelCourse = Ribbon_Utilities.AddRibbonPanelToTab(uiCtrlApp, Globals.AddinName, "Course");
+            // Course panel: HIDDEN since 2026-11-06. The course code stays in the project only as a study reference
+            // and is not shown to other users. To show the panel again, uncomment the block below.
+
+            //var panelCourse = Ribbon_Utilities.AddRibbonPanelToTab(uiCtrlApp, Globals.AddinName, "Course");
 
             // Course: test buttons
-            var Button = Ribbon_Utilities.AddPushButtonToPanel(panelCourse, "Test Button", "CodeLab.Commands.General.Command_Button",availability: AvailabilityNames.ZeroDoc);
+            //var Button = Ribbon_Utilities.AddPushButtonToPanel(panelCourse, "Test Button", "CodeLab.Commands.General.Command_Button",availability: AvailabilityNames.ZeroDoc);
 
-            var pulldown = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse, "Test Pulldown", "CodeLab.Commands.General.Command_Pulldown");
-            var pulldownBtn1 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 1", "CodeLab.Commands.General.Command_1Button");
-            var pulldownBtn2 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 2", "CodeLab.Commands.General.Command_2Button");
-            var pulldownBtn3 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 3", "CodeLab.Commands.General.Command_3Button");
+            //var pulldown = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse, "Test Pulldown", "CodeLab.Commands.General.Command_Pulldown");
+            //var pulldownBtn1 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 1", "CodeLab.Commands.General.Command_1Button");
+            //var pulldownBtn2 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 2", "CodeLab.Commands.General.Command_2Button");
+            //var pulldownBtn3 = Ribbon_Utilities.AddPushButtonToPulldown(pulldown, "Pulldown Button 3", "CodeLab.Commands.General.Command_3Button");
 
-            var stack1Data = Ribbon_Utilities.AddPulldownButtonData("Stack 1", "CodeLab.Commands.General.Command_Stack1");
-            var stack2Data = Ribbon_Utilities.AddPulldownButtonData("Stack 2", "CodeLab.Commands.General.Command_Stack2");
-            var stack3Data = Ribbon_Utilities.AddPulldownButtonData("Stack 3", "CodeLab.Commands.General.Command_Stack3");
+            //var stack1Data = Ribbon_Utilities.AddPulldownButtonData("Stack 1", "CodeLab.Commands.General.Command_Stack1");
+            //var stack2Data = Ribbon_Utilities.AddPulldownButtonData("Stack 2", "CodeLab.Commands.General.Command_Stack2");
+            //var stack3Data = Ribbon_Utilities.AddPulldownButtonData("Stack 3", "CodeLab.Commands.General.Command_Stack3");
 
-            var stack = panelCourse.AddStackedItems(stack1Data, stack2Data, stack3Data);
-            var pulldownStack1 = stack[0] as PulldownButton;
-            var pulldownStack2 = stack[1] as PulldownButton;
-            var pulldownStack3 = stack[2] as PulldownButton;
+            //var stack = panelCourse.AddStackedItems(stack1Data, stack2Data, stack3Data);
+            //var pulldownStack1 = stack[0] as PulldownButton;
+            //var pulldownStack2 = stack[1] as PulldownButton;
+            //var pulldownStack3 = stack[2] as PulldownButton;
 
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack1, "Button 1", "CodeLab.Commands.General.Command_Stack1");
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack2, "Button 2", "CodeLab.Commands.General.Command_Stack2");
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack3, "Button 3", "CodeLab.Commands.General.Command_Stack3");
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack1, "Button 1", "CodeLab.Commands.General.Command_Stack1");
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack2, "Button 2", "CodeLab.Commands.General.Command_Stack2");
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownStack3, "Button 3", "CodeLab.Commands.General.Command_Stack3");
 
-            var splitButton = Ribbon_Utilities.AddSplitButtonToPanel(panelCourse, "Split 1");
-            var splitbutton1 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 1", "CodeLab.Commands.General.Command_Split1");
-            var splitbutton2 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 2", "CodeLab.Commands.General.Command_Split2");
-            var splitbutton3 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 3", "CodeLab.Commands.General.Command_Split3");
+            //var splitButton = Ribbon_Utilities.AddSplitButtonToPanel(panelCourse, "Split 1");
+            //var splitbutton1 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 1", "CodeLab.Commands.General.Command_Split1");
+            //var splitbutton2 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 2", "CodeLab.Commands.General.Command_Split2");
+            //var splitbutton3 = Ribbon_Utilities.AddPushButtonToPulldown(splitButton, "Split 3", "CodeLab.Commands.General.Command_Split3");
 
             // Course: a separator line between the test buttons and the lesson tools
-            panelCourse.AddSeparator();
+            //panelCourse.AddSeparator();
 
             // Add revision pulldown
-            var pulldownRevision = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Revision", "CodeLab.Commands.General.Revision_Button");
+            //var pulldownRevision = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Revision", "CodeLab.Commands.General.Revision_Button");
 
             // Add pushbuttons to revision
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownRevision, "Revision1", "CodeLab.Commands.General.Revision1_Button",availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownRevision, "Revision1", "CodeLab.Commands.General.Revision1_Button",availability: AvailabilityNames.Project);
 
             // Add worksets pulldown
-            var pulldownWorkset = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Workset", "CodeLab.Commands.General.Workset_Button");
+            //var pulldownWorkset = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Workset", "CodeLab.Commands.General.Workset_Button");
 
             // Add pushbuttons to workset
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownWorkset, "Create workset(s)", "CodeLab.Commands.General.Workset1_Button", availability: AvailabilityNames.Workshared);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownWorkset, "Create workset(s)", "CodeLab.Commands.General.Workset1_Button", availability: AvailabilityNames.Workshared);
 
             // Add selection pulldown
-            var pulldownSelection = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Select", "CodeLab.Commands.General.Select_Button");
+            //var pulldownSelection = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Select", "CodeLab.Commands.General.Select_Button");
 
             // Add pushbuttons to selection
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select titleblocks on sheets", "CodeLab.Commands.General.Select1_Button", availability: AvailabilityNames.Selection_SheetsOnly);
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select rooms", "CodeLab.Commands.General.Select2_Button", availability: AvailabilityNames.Project);
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select hidden elements", "CodeLab.Commands.General.Select3_Button", availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select titleblocks on sheets", "CodeLab.Commands.General.Select1_Button", availability: AvailabilityNames.Selection_SheetsOnly);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select rooms", "CodeLab.Commands.General.Select2_Button", availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownSelection, "Select hidden elements", "CodeLab.Commands.General.Select3_Button", availability: AvailabilityNames.Project);
 
             // Add import pulldown
-            var pulldownImport = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Import", "CodeLab.Commands.General.Import_Button");
+            //var pulldownImport = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Import", "CodeLab.Commands.General.Import_Button");
 
             // Add pushbuttons to import
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownImport, "Import sheets from Excel", "CodeLab.Commands.General.Import1_Button", availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownImport, "Import sheets from Excel", "CodeLab.Commands.General.Import1_Button", availability: AvailabilityNames.Project);
 
             // Add export pulldown
-            var pulldownExport = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Export", "CodeLab.Commands.General.Export_Button");
+            //var pulldownExport = Ribbon_Utilities.AddPulldownButtonToPanel(panelCourse,"Export", "CodeLab.Commands.General.Export_Button");
 
             // Add pushbuttons to export
-            Ribbon_Utilities.AddPushButtonToPulldown(pulldownExport, "Export sheets to PDF", "CodeLab.Commands.General.Export1_Button", availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPulldown(pulldownExport, "Export sheets to PDF", "CodeLab.Commands.General.Export1_Button", availability: AvailabilityNames.Project);
 
             // Testing button (directly on the panel, no pulldown)
-            Ribbon_Utilities.AddPushButtonToPanel(panelCourse, "Testing", "CodeLab.Commands.General.Testing_Button", availability: AvailabilityNames.Project);
+            //Ribbon_Utilities.AddPushButtonToPanel(panelCourse, "Testing", "CodeLab.Commands.General.Testing_Button", availability: AvailabilityNames.Project);
 
             return Result.Succeeded;
 
