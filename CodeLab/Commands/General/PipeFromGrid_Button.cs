@@ -20,9 +20,9 @@ namespace CodeLab.Commands.General
     [Transaction(TransactionMode.Manual)]
     public class PipeFromGrid_Button : IExternalCommand
     {
-        // Two pipes closer than this (1") along the measured axis get one witness line only.
+        // Two pipes closer than this (1/2") along the measured axis get one witness line only (was 1").
         // static readonly, not const: the value comes from a method, calculated once and never changed.
-        private static readonly double MERGE_TOLERANCE_FEET = Units_Utilities.InchesToFeet(1.0);
+        private static readonly double MERGE_TOLERANCE_FEET = Units_Utilities.InchesToFeet(0.5);
 
         // A pipe closer than this (1/8") to its grid is not dimensioned (the value would show ~0)
         private static readonly double MIN_DISTANCE_TO_GRID_FEET = Units_Utilities.InchesToFeet(0.125);
